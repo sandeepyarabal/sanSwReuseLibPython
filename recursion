@@ -1,0 +1,12 @@
+def r_sum(nested_num_list):
+    tot = 0
+    for element in nested_num_list:
+        if type(element) == type([]):
+            tot += r_sum(element)
+        else:
+            tot += element
+    return tot
+    
+sum =[1, 2, [1, 1,5], 8]
+s = r_sum(sum)
+print(s)
